@@ -229,7 +229,8 @@ static int
 flatten_data_attrs_i(VALUE key, VALUE value, VALUE flattened)
 {
   struct flatten_data_attrs_i2_arg arg;
-  key = hyphenate(to_s(key));
+  // key = hyphenate(to_s(key));
+  key = to_s(key);
 
   switch (TYPE(value)) {
     case T_HASH:
